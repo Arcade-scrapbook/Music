@@ -36,7 +36,48 @@ nav ul li a {
 img {
   width: 100%;
 }
+h1 {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
 
+body {
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url(https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/aa462558-0106-4268-9864-d34a4f35531f);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* MAIN MENU */
+
+main {
+  display: grid;
+  grid-template-columns: 11% 89%;
+  width: 95%;
+  margin: 40px;
+  background: rgba(16, 21, 61, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset,
+    0 1px 0 0 rgba(255, 255, 255, 0.6) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
+  z-index: 10;
+}
+
+.main-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px 0 0 15px;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 12px 0 20px;
+  overflow: hidden;
+  font-family: inherit;
+}
     </style>
 </head>
 <body>
