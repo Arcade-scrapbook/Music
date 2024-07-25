@@ -233,6 +233,49 @@ main {
   background: #e9e6eb;
   color: #000;
 }
+    /* Containers of Artist and Albums */
+
+.containers {
+  display: flex;
+  align-items: center;
+  padding: 0 0 12px;
+  overflow-x: auto;
+  cursor: grab;
+}
+
+/* ARTISTS */
+
+.artists h1 {
+  margin-bottom: 24px;
+}
+
+.artist-container {
+  column-gap: 20px;
+}
+
+.artist {
+  display: grid;
+  grid-auto-flow: dense;
+  align-items: center;
+  grid-template-rows: 8fr 2fr;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+}
+
+.artist img {
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgba(169, 150, 253, 0.5);
+  width: 140px;
+  aspect-ratio: 1/1;
+  margin-bottom: 8px;
+  box-shadow: rgba(221, 221, 221, 0.3) 0px 6px 18px -3px,
+    rgba(221, 221, 221, 0.2) 0px -3px 0px inset;
+  transition: all 0.2s;
+}
     </style>
 </head>
 <body>
