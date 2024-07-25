@@ -276,6 +276,48 @@ main {
     rgba(221, 221, 221, 0.2) 0px -3px 0px inset;
   transition: all 0.2s;
 }
+        .artist img:hover {
+  border: 4px solid rgba(169, 150, 253, 0.6);
+}
+
+.artist p {
+  font-size: clamp(0.9rem, 3vw, 1rem);
+  font-weight: 500;
+  text-align: center;
+}
+
+/* ALBUMS */
+
+.albums h1 {
+  margin: 60px 0 14px;
+}
+
+.album-container {
+  column-gap: 24px;
+}
+
+.album {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-rows: 5fr 2fr;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+}
+
+.album-frame {
+  position: relative;
+  width: 180px;
+  aspect-ratio: 1/1;
+  border: 2px solid rgba(169, 150, 253, 0.5);
+  border-radius: 10px;
+  box-shadow: rgba(221, 221, 221, 0.3) 0px 8px 18px -3px,
+    rgba(221, 221, 221, 0.2) 0px -3px 0px inset;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
     </style>
 </head>
 <body>
