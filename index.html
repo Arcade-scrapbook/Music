@@ -447,7 +447,53 @@ main {
   opacity: 0.8;
 }
 
+/* MUSIC PLAYER */
 
+.music-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: rgba(188, 184, 198, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: inset 2px -2px 6px rgba(214, 214, 214, 0.2),
+    inset -3px 3px 3px rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 30px 20px;
+  margin-top: 20px;
+}
+
+.album-cover {
+  position: relative;
+}
+
+.album-cover img {
+  border-radius: 50%;
+  border: 2px solid rgba(222, 215, 255, 0.9);
+  max-width: 120px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  box-shadow: 0 10px 60px rgba(200, 187, 255, 01.75rem);
+  transition: transform 0.5s ease-out;
+  pointer-events: none;
+  user-select: none;
+}
+
+.point {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 16px;
+  background-color: rgba(17, 6, 58, 0.7);
+  border: 2px solid rgba(222, 215, 255, 0.9);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  z-index: 2;
+}
 
     </style>
 </head>
