@@ -742,7 +742,64 @@ main {
     grid-template-columns: 28% auto 10%;
   }
 }
+@media (max-width: 700px) {
+  main {
+    grid-template-columns: 15% 85%;
+  }
 
+  .content {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "leftContent"
+      "rightContent";
+  }
+
+  .left-content {
+    grid-area: leftContent;
+  }
+
+  .slide-overlay {
+    row-gap: 12px;
+    padding: 20px 30px;
+  }
+
+  .swiper-slide {
+    width: 420px;
+  }
+
+  .artist img {
+    width: 110px;
+  }
+
+  .album {
+    grid-template-rows: 3fr 2fr;
+  }
+
+  .album-frame {
+    width: 140px;
+  }
+
+  .right-content {
+    grid-area: rightContent;
+    border-left: unset;
+    grid-template-rows: 60% 40%;
+    row-gap: 16px;
+  }
+  
+   .song {
+    grid-template-columns: 18% auto 8%;
+  }
+
+  .song:nth-child(7),
+  .song:nth-child(8),
+  .song:nth-child(9) {
+    display: grid;
+  }
+
+  .controls button {
+    margin: 20px;
+  }
+}
 
 
     </style>
