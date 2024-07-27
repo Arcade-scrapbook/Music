@@ -565,6 +565,38 @@ main {
 .controls button:nth-child(2):is(:hover, :focus-visible) {
   transform: scale(1.25);
 }
+        /* MEDIA QUERIES */
+
+@media (max-width: 1500px) {
+  main {
+    grid-template-columns: 6% 94%;
+  }
+
+  .user-info img {
+    border-radius: 50%;
+    padding: 12px 12px 6px;
+  }
+
+  .nav-icon {
+    text-align: center;
+    transform: translateY(2px);
+  }
+
+  .nav-text {
+    display: none;
+  }
+
+  .content {
+    grid-template-columns: 70% 30%;
+  }
+}
+
+@media (max-width: 1310px) {
+  main {
+    grid-template-columns: 8% 92%;
+    margin: 30px;
+  }
+}
 
 
     </style>
