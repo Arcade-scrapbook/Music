@@ -800,6 +800,52 @@ main {
     margin: 20px;
   }
 }
+        @media (max-width: 580px) {
+  .swiper-slide {
+    width: 340px;
+  }
+
+  .swiper-slide img {
+    height: 180px;
+  }
+
+  .artist img {
+    width: 80px;
+  }
+
+  .album {
+    grid-template-rows: 3fr 2fr;
+  }
+
+  .album-frame {
+    width: 100px;
+  }
+  
+   .song {
+    grid-template-columns: 23% auto 8%;
+  }
+}
+
+@media (max-width: 450px) {
+  .user-info img {
+    border-radius: 50%;
+    padding: 6px 6px 2px;
+  }
+
+  .swiper-slide {
+    width: 320px;
+  }
+
+  .slide-overlay {
+    row-gap: 8px;
+    padding: 12px 36px;
+  }
+  
+   .song {
+    grid-template-columns: 25% auto 8%;
+  }
+}
+
 
 
     </style>
