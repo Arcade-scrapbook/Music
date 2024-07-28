@@ -1389,6 +1389,45 @@ main {
       currentRotation += 1;
       rotatingImage.style.transform = `rotate(${currentRotation}deg)`;
     }
+ function updateSongInfo() {
+      songName.textContent = songs[currentSongIndex].title;
+      artistName.textContent = songs[currentSongIndex].name;
+      song.src = songs[currentSongIndex].source;
+      rotatingImage.src = songs[currentSongIndex].cover;
+
+      song.addEventListener("loadeddata", function () { });
+    }
+
+    song.addEventListener("loadedmetadata", function () {
+      progress.max = song.duration;
+      progress.value = song.currentTime;
+    });
+
+    song.addEventListener("ended", function () {
+      currentSongIndex = (currentSongIndex + 1) % songs.length;
+      updateSongInfo();
+      playPause();
+    });
+
+    song.addEventListener("timeupdate", function () {
+      if (!song.paused) {
+        progress.value = song.currentTime;
+      }
+    });
+
+    function playPause() {
+      if (song.paused) {
+        song.play();
+        controlIcon.classList.add("fa-pause");
+        controlIcon.classList.remove("fa-play");
+        startRotation();
+      } else {
+        song.pause();
+        controlIcon.classList.remove("fa-pause");
+        controlIcon.classList.add("fa-play");
+        pauseRotation();
+      }
+    }
 
 
 </script>
