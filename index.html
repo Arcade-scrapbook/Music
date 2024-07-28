@@ -1313,6 +1313,38 @@ main {
         startX = e.pageX - container.offsetLeft;
         scrollLeft = container.scrollLeft;
       });
+        container.addEventListener("mousemove", (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+
+        const x = e.pageX - container.offsetLeft;
+        const step = (x - startX) * 0.6;
+        container.scrollLeft = scrollLeft - step;
+      });
+
+      container.addEventListener("mouseup", () => {
+        isDragging = false;
+      });
+
+      container.addEventListener("mouseleave", () => {
+        isDragging = false;
+      });
+    });
+
+    const progress = document.getElementById("progress");
+    const song = document.getElementById("song");
+    const controlIcon = document.getElementById("controlIcon");
+    const playPauseButton = document.querySelector(".play-pause-btn");
+    const forwardButton = document.querySelector(".controls button.forward");
+    const backwardButton = document.querySelector(".controls button.backward");
+    const rotatingImage = document.getElementById("rotatingImage");
+    const songName = document.querySelector(".music-player h2");
+    const artistName = document.querySelector(".music-player p");
+
+    let rotating = false;
+    let currentRotation = 0;
+    let rotationInterval;
+
 
 </script>
 </body>
